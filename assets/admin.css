@@ -1,0 +1,113 @@
+div#sbbg_admin h1 {
+    background: #e0e0e0;
+    padding: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+span.help {
+    display: block;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+div#sbbg_admin button {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+span#sbbg_selected_csv {
+    background: #ffc7c7;
+    padding: 4px 10px;
+    font-style: italic;
+    position: relative;
+    top: 3px;
+}
+
+#sbbg_ul_csv > p:nth-child(1) > label {
+    display: initial;margin-right: 15px;
+}
+
+input#sbbg_shipping_csv {
+    display: block;
+    margin-top: 15px;
+}
+
+div#sbbg_shipping_companies {
+    padding-top: 15px;
+}
+
+div#sbbg_shipping_co_table_cont {
+    background: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 50vw;
+}
+
+#sbbg_shipping_companies > span {
+    margin-bottom: 15px;
+    display: block;
+}
+
+table#sbbg_shipping_co_data_table {
+    border: 1px solid #ddd;
+}
+
+table#sbbg_shipping_co_data_table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+}
+
+table#sbbg_shipping_co_data_table th {
+    border: 1px solid #ddd;
+    line-height: 3;
+    text-transform: uppercase;
+}
+
+td.sbbg_add_shipping_co {
+    border: none !important;
+    width: 20px;
+    padding: 5px;
+}
+
+td.sbbg_remove_shipping_co {
+    border: none !important;
+    width: 20px;
+    padding: 5px;
+}
+
+td.sbbg_remove_shipping_co > a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+td.sbbg_add_shipping_co > a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007cba;
+    color: white;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+a#sbbg_save_companies {
+    display: block;
+    width: 51vw;
+    text-align: center;
+    text-decoration: none;
+    background: #007cba;
+    color: white;
+    line-height: 2.1;
+    border-radius: 3px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
