@@ -28,6 +28,13 @@ function sbbg_shipping_data()
     if (($csv_file = fopen($csv_url, "r")) !== FALSE) :
         /* push file data to combined shipping data array */
         while ($read_csv_file = fgetcsv($csv_file)) :
+
+            // skip empty lines in CSV to avoid issues
+            if ($read_csv_file[0] == NULL) {
+                continue;
+            }
+
+            // push valid data to array
             $combined_shipping_data_arr[] = $read_csv_file;
         endwhile;
         /* close file after reading */

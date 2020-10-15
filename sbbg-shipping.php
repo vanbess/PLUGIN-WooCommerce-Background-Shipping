@@ -28,4 +28,27 @@ function sbbg_load()
 
   // include shipping process scheduler
   require SBBG_PATH . 'functions/sbbg_schedule_processing.php';
+
+  // TESTING CSV FILES
+ /* get url to uploaded csv file */
+ $csv_url = get_option('sbbg_file_url');
+
+ /* combined data array */
+ $combined_shipping_data_arr = [];
+
+ /* open file for reading */
+ if (($csv_file = fopen($csv_url, "r")) !== FALSE) :
+     /* push file data to combined shipping data array */
+     while ($read_csv_file = fgetcsv($csv_file)) :
+      if($read_csv_file[0] == NULL){
+        continue;
+      }
+         $combined_shipping_data_arr[] = $read_csv_file;
+     endwhile;
+     /* close file after reading */
+     fclose($csv_file);
+ endif;
+
+ file_put_contents(SBBG_PATH . 'logs/csv_file_log.log', print_r($combined_shipping_data_arr, true));
+
 }
